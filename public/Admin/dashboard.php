@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="./dashboard.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -100,18 +102,18 @@
     <div class="charts">
         <div class="chart">
             <h2>Earnings (past 12 months)</h2>
-            <canvas id="lineChart"></canvas>
+            <canvas id="lineChart" width="5cm"></canvas>
         </div>
         <div class="chart" id="clock">
             <h2>Localtime (Mauritius)</h2>
             <div class="date">
-                <!-- <?php date_default_timezone_set("Indian/Mauritius");
+                <?php date_default_timezone_set("Indian/Mauritius");
                         $hour = date('h');
                         $minute = date('ia');
                         $mydate=getdate(date("U"));
                         $date = "$mydate[mday] $mydate[month] $mydate[year]"; 
                         echo $date;
-                    ?> -->
+                    ?>
             </div>
             <div class="clock-container">
                 <div class="clock">
@@ -129,5 +131,26 @@
         </div>
     </div>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script src="./js/char1.js"></script>
+<script type="text/javascript">
+    const deg = 6;
+    const hr = document.querySelector("#hr");
+    const mn = document.querySelector("#mn");
+    const sc = document.querySelector("#sc");
+    setInterval(() => {
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+        hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+    })
+</script>
+<script>
+    $('#menu-btn').click(function(){
+        $('#menu').toggleClass("active");
+    })
+</script>
 </html>

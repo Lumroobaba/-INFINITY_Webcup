@@ -232,11 +232,12 @@ nav {
     border-radius: 40px;
 }
 
-/* chart */
+/* ----------------------------------chart---------------------------------- */
+/* ------------------------------------------------------------------------- */
 
 .charts{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    /* grid-template-columns: 2fr 1fr; */
     grid-gap: 20px;
     width: 90%;
     padding: 30px;
