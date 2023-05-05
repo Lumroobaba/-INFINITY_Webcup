@@ -17,7 +17,7 @@ nav {
     flex-direction: row;
 }
 
-.hamburger h2 {
+.container h2 {
     position: relative;
     bottom: 23px;
     left: 10px;
