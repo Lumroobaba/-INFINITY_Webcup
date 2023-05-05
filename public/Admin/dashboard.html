@@ -60,7 +60,8 @@
     <div class="details">
         <div class="val-box">
             <div>
-                <i class='bx bxs-user'></i></div>
+                <i class='bx bxs-user'></i>
+            </div>
             <div>
                 <h3>111111</h3>
                 <span>Total Users</span>
@@ -88,14 +89,45 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <!-- <div class="container">
         <div class="graph">
-            <img src="https://i.pinimg.com/236x/60/0e/7e/600e7e589feab89d396258c5bcd85303.jpg" alt="">
-        </div>
+          
+   </div>
         <div class="clock">
         </div>
-    </div>
+    </div> -->
 
+    <div class="charts">
+        <div class="chart">
+            <h2>Earnings (past 12 months)</h2>
+            <canvas id="lineChart"></canvas>
+        </div>
+        <div class="chart" id="clock">
+            <h2>Localtime (Mauritius)</h2>
+            <div class="date">
+                <!-- <?php date_default_timezone_set("Indian/Mauritius");
+                        $hour = date('h');
+                        $minute = date('ia');
+                        $mydate=getdate(date("U"));
+                        $date = "$mydate[mday] $mydate[month] $mydate[year]"; 
+                        echo $date;
+                    ?> -->
+            </div>
+            <div class="clock-container">
+                <div class="clock">
+                    <div class="hour">
+                        <div class="hr" id="hr"></div>
+                    </div>
+                    <div class="min">
+                        <div class="mn" id="mn"></div>
+                    </div>
+                    <div class="sec">
+                        <div class="sc" id="sc"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
