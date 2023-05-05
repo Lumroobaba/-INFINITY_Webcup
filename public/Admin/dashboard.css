@@ -1,109 +1,234 @@
- body {
-     margin: 0;
-     padding: 0;
-     background: #232323;
-     color: #cdcdcd;
-     font-family: "Avenir Next", "Avenir", sans-serif;
- }
+body {
+    margin: 0;
+    padding: 0;
+    background: #232323;
+    color: #cdcdcd;
+    width: 100%;
+}
 
- #menuToggle {
-     display: block;
-     position: relative;
-     top: 50px;
-     left: 50px;
-     width: fit-content;
-     z-index: 1;
-     -webkit-user-select: none;
-     user-select: none;
- }
+nav {
+    height: 0% !important;
+    position: absolute;
+}
 
- #menuToggle a {
-     text-decoration: none;
-     color: #232323;
+.hamburger {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
 
-     transition: color 0.3s ease;
- }
+.hamburger h2 {
+    position: relative;
+    bottom: 23px;
+    left: 10px;
+}
 
- #menuToggle a:hover {
-     color: tomato;
- }
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: fit-content;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: tomato;
+}
 
 
- #menuToggle input {
-     display: block;
-     width: 40px;
-     height: 32px;
-     position: absolute;
-     top: -7px;
-     left: -5px;
-     cursor: pointer;
-     opacity: 0;
-     z-index: 2;
-     -webkit-touch-callout: none;
- }
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
 
- /*
-  * Just a quick hamburger
-  */
- #menuToggle span {
-     display: block;
-     width: 33px;
-     height: 4px;
-     margin-bottom: 5px;
-     position: relative;
-     background: #cdcdcd;
-     border-radius: 3px;
-     z-index: 1;
-     transform-origin: 4px 0px;
-     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-         opacity 0.55s ease;
- }
+#menuToggle .container  .hamburgers span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
 
- #menuToggle span:first-child {
-     transform-origin: 0% 0%;
- }
+#menuToggle .container  .hamburgers span:first-child {
+    transform-origin: 0% 0%;
+}
 
- #menuToggle span:nth-last-child(2) {
-     transform-origin: 0% 100%;
- }
+#menuToggle .container  .hamburgers span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
 
- #menuToggle input:checked~span {
-     opacity: 1;
-     transform: rotate(45deg) translate(-2px, -1px);
-     background: #232323;
- }
+#menuToggle input:checked~ .container  .hamburgers span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-15px, -13px);
+    background: #232323;
+}
 
- #menuToggle input:checked~span:nth-last-child(3) {
-     opacity: 0;
-     transform: rotate(0deg) scale(0.2, 0.2);
- }
+#menuToggle input:checked~ .container  .hamburgers span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
 
- #menuToggle input:checked~span:nth-last-child(2) {
-     transform: rotate(-45deg) translate(0, -1px);
- }
+#menuToggle input:checked~ .container  .hamburgers span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
 
- #menu {
-     position: fixed;
-     width: 300px;
-     height: 100vh;
-     margin: -100px 0 0 -50px;
-     padding: 50px;
-     padding-top: 125px;
-     background: #ededed;
-     list-style-type: none;
-     -webkit-font-smoothing: antialiased;
-     transform-origin: 0% 0%;
-     transform: translate(-100%, 0);
+#menu {
+    position: fixed;
+    top:   10%;
+    width: 25%;
+    height: 100vh;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #fafafa;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    display: flex;
+    flex-direction: column;
+}
+.bx{
+   padding-right: 5%;
+}
+#menu li {
+    padding: 3vh 0;
+    font-size: 22px;
+}
 
-     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
- }
+#menuToggle input:checked~ul {
+    transform: none;
+}
 
- #menu li {
-     padding: 10px 0;
-     font-size: 22px;
- }
+/* -------------------------Dashboard start here------------------------- */
+.header {
+    width: 100vw;
+    padding: 2% 5% 4% 10%;
+    border-bottom: 2px solid red;
+    align-items: center;
+}
 
- #menuToggle input:checked~ul {
-     transform: none;
- }
+.header .item {
+    position: relative;
+    top: 2vw;
+    left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 70%;
+}
+
+.profile .bx {
+    font-size: 100%;
+    position: relative;
+    bottom: 20%;
+    right: 20%;
+}
+
+.bx-search-alt-2 {
+    position: absolute;
+    top: 30%;
+    padding-left: .5%;
+    color: grey;
+}
+
+.search input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 7.5% 13%; 
+    border: 1px solid #d7dbe6;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* -----------------------4 top boxes start here----------------------- */
+/* -------------------------------------------------------------------- */
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    float: right;
+    padding: 3% 0 3% 0;
+}
+
+.val-box{
+    background: rgb(119, 117, 117);
+    padding: 0 3vw 0 3vw;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.val-box  div span {
+    width: 100%;
+}
+.val-box .bx{
+    background: red;
+    padding: .5cm;
+    border-radius: 50%;
+    margin-right: 10%;
+}
+
+/* -------------------------Graph starts here-------------------------*/
+/* ------------------------------------------------------------------ */
+.container {
+    height: 10cm;
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5% 0 5% 0;
+}
+
+.container .graph {
+    width: 50%;
+    height: 100%;
+}
+
+.container .clock {
+    width: 40%;
+    height: 100%;
+    background: white;
+}
+
+.container .graph img {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}

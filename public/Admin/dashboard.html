@@ -7,42 +7,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DASHBOARD</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="./dashboard.css">
 </head>
 
 <body>
     <nav role="navigation">
         <div id="menuToggle">
-            <!--
-      A fake / hidden checkbox is used as click reciever,
-      so you can use the :checked selector on it.
-      -->
             <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="container">
+                <div class="hamburgers">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h2>TITLE</h2>
+            </div>
             <ul id="menu">
                 <a href="#">
-                    <li>Home</li>
+                    <li><i class="bx bx-line-chart"></i>Dashboard</li>
                 </a>
                 <a href="#">
-                    <li>About</li>
+                    <li><i class="bx bx-category"></i>Product list</li>
                 </a>
                 <a href="#">
-                    <li>Info</li>
+                    <li><i class="bx bxs-user"></i>Users</li>
                 </a>
                 <a href="#">
-                    <li>Contact</li>
+                    <li><i class="bx bxs-id-card"></i>Admin</li>
                 </a>
                 <a href="#" target="_blank">
-                    <li>Show me more</li>
+                    <li><i class="bx bx-message-dots"></i>Message</li>
+                </a>
+                <a href="#" target="_blank">
+                    <li><i class="bx bx-log-out"></i>Logout</li>
                 </a>
             </ul>
         </div>
     </nav>
+    <div class="header">
+        <div class="item">
+            <div class="search">
+                <i class='bx bx-search-alt-2'></i>
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="profile">
+                <i class='bx bx-bell'></i>
+                <img src="https://i.pinimg.com/236x/60/0e/7e/600e7e589feab89d396258c5bcd85303.jpg" alt="d,p">
+            </div>
+        </div>
+    </div>
+    <div class="details">
+        <div class="val-box">
+            <div>
+                <i class='bx bxs-user'></i></div>
+            <div>
+                <h3>111111</h3>
+                <span>Total Users</span>
+            </div>
+        </div>
+        <div class="val-box">
+            <i class='bx bxs-cart'></i>
+            <div>
+                <h3>222222</h3>
+                <span>Total Orders</span>
+            </div>
+        </div>
+        <div class="val-box">
+            <i class='bx bx-data'></i>
+            <div>
+                <h3>333333</h3>
+                <span>Total Products</span>
+            </div>
+        </div>
+        <div class="val-box">
+            <i class='bx bx-dollar'></i>
+            <div>
+                <h3>4444444</h3>
+                <span>This Month</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="graph">
+            <img src="https://i.pinimg.com/236x/60/0e/7e/600e7e589feab89d396258c5bcd85303.jpg" alt="">
+        </div>
+        <div class="clock">
+        </div>
+    </div>
 
-
-    
 </body>
 
 </html>
