@@ -122,10 +122,18 @@
                 </div>
             </div>
         </div>
+        <div class="chart graph">
+            <h2>Sales (past 12 months)</h2>
+            <canvas id="lineChart2" width="5cm"></canvas>
+        </div>
+        <div class="chart graph">
+            <h2>Visit (past 12 months)</h2>
+            <canvas id="lineChart3" width="5cm"></canvas>
+        </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-<script src="./js/char1.js"></script>
+<script src="../assets/js/char1.js"></script>
 <script type="text/javascript">
     const deg = 6;
     const hr = document.querySelector("#hr");
