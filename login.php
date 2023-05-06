@@ -15,53 +15,51 @@
 </head>
 
 <body>
-    <div class="main">
-        
-    <div class="login">
-        <img src="./assets/img/login-bg.png" alt="login image" class="login__img">
-        <form action="" class="login__form">
-            <h1 class="login__title">Login</h1>
-            <div class="login__content">
-                <div class="login__box">
-                    <i class="ri-user-fill login__icon"></i>
+    <div class="main"> 
+        <div class="login">
+            <img src="./assets/img/space-login.jpg" alt="login image" class="login__img">
+            <form action="" class="login__form">
+                <h1 class="login__title">Login</h1>
+                <div class="login__content">
+                    <div class="login__box">
+                        <i class="ri-user-fill login__icon"></i>
 
-                    <div class="login__box-input">
-                        <input type="email" class="login__input"   placeholder="" required>
-                        <label for="" class="login__label login__eye" >Email</label>
+                        <div class="login__box-input">
+                            <input type="email" class="login__input" placeholder="" required>
+                            <label for="" class="login__label login__eye">Email</label>
+                        </div>
                     </div>
-                </div>
 
-                <div class="login__box">
-                    <i class="ri-lock-2-line login__icon"></i>
+                    <div class="login__box">
+                        <i class="ri-lock-2-line login__icon"></i>
 
-                    <div class="login__box-input">
-                        <input type="password" class="login__input" id="login-pass" placeholder="" required>
-                        <label for="" class="login__label">Password</label>
-                        <i class="ri-eye-line login__eye" id="login-eye"></i>
+                        <div class="login__box-input">
+                            <input type="password" class="login__input" id="login-pass" placeholder="" required>
+                            <label for="" class="login__label">Password</label>
+                            <i class="ri-eye-line login__eye" id="login-eye"></i>
+                        </div>
                     </div>
+
+                </div>
+                <div class="login__check">
+                    <div class="login__check-group">
+                        <input type="checkbox" class="login__check-input">
+                        <label for="" class="login_check-label">Remember me</label>
+                    </div>
+
+                    <a href=" " class="login__forgot">Forgot Password?</a>
                 </div>
 
-            </div>
-            <div class="login__check">
-                <div class="login__check-group">
-                    <input type="checkbox" class="login__check-input">
-                    <label for="" class="login_check-label">Remember me</label>
-                </div>
+                <button class="login__button">Login</button>
 
-                <a href=" " class="login__forgot">Forgot Password?</a>
-            </div>
-
-            <button class="login__button">Login</button>
-
-            <p class="Login__register">
-                Don't have an account?<a href="register.php">Register</a>
-            </p>
-        </form>
-    </div>
+                <p class="login__register">
+                    Don't have an account ? <a href="register.php"> Register</a>
+                </p>
+            </form>
+        </div>
     </div>
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/login.js"></script>
-</body>
-
+</body> 
 </html>

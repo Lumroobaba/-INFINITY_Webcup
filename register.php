@@ -70,8 +70,8 @@
 
                 <button class="login__button">Register</button>
 
-                <p class="Login__register">
-                    Already have an account?<a href="login.html">Login</a>
+                <p class="login__register">
+                    Already have an account ? <a href="login.php"> Login</a>
                 </p>
             </form>
         </div>
