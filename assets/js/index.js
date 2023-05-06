@@ -1,11 +1,11 @@
 const carouselText = [
-    {text: "Hello", color: "red"},
-    {text: "I am Onyrix", color: "red"},
-    {text: "I will be your dream analyser today", color: "red"},
-    {text: "tell me about it", color: "red"},
-    {text: "but.....", color: "red"},
+    {text: "Hello", color: "white"},
+    {text: "I am Onyrix", color: "white"},
+    {text: "I will be your dream analyser today", color: "white"},
+    {text: "Tell me about it", color: "white"},
+    {text: "But.....", color: "orange"},
     {text: "BEWARE!!!!!", color: "red"},
-    {text: "If it was a nightmare, report it directly", color: "red"}
+    {text: "We cannot analyse nightmare, please seek professional help.", color: "white"}
   ]
   
   $( document ).ready(async function() {
