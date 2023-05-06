@@ -53,9 +53,16 @@ function bot() {
     http.onload = () => {
         // process response here
         var response = JSON.parse(http.response);
-        var replyText = response.choices[0].message.content;
+        var replyText = processResponse(response.choices[0].message.content);
         var replyContainer = document.querySelectorAll('.response');
         replyContainer[replyContainer.length - 1].querySelector('div').innerHTML = replyText;
         scrollDown();
     };
+    function processResponse(res){
+        var arr = res.split(':')
+        return arr[arr.length-1]
+            .replace(/(\r\n|\r|\n)/gm, '')
+            .trim()
+    }
+    
 }
