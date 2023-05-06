@@ -3,8 +3,8 @@ const carouselText = [
     {text: "I am Onyrix", color: "white"},
     {text: "I will be your dream analyser today", color: "white"},
     {text: "Tell me about it", color: "white"},
-    {text: "But.....", color: "orange"},
-    {text: "BEWARE!!!!!", color: "red"},
+    {text: "But.....", color: "purple"},
+    {text: "BEWARE!!!!!", color: "dark purple"},
     {text: "I cannot analyse nightmare, please seek professional help.", color: "white"}
   ]
   
