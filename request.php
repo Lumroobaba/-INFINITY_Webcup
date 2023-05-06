@@ -11,14 +11,14 @@
 	$messages = array();
 	$message = array();
 	$message["role"] = "user";
-    $message["content"] = 'Onirix is an advanced artificial intelligence that can analyze and decode users dreams to predict their future. This evolutionary technology can, for example, predict situations such as a romantic encounter, problems with coworkers, school difficulties, or even serious illnesses. Please note that the results of the analysis must be presented in a clear and accurate way. First give the prediction of the situation, then second the prediction of future based on the dreams. And if it is a nightmare, do not predict anything, just reply with "You had a nightmare, go see professional help."  . The dream:' . $_REQUEST['prompt'];
+    $message["content"] = 'Onirix is an advanced artificial intelligence that can analyze and decode users dreams to predict their future. This evolutionary technology can, for example, predict situations such as a romantic encounter, problems with coworkers, school difficulties, or even serious illnesses. Please note that the results of the analysis must be presented in a clear and accurate way. First give the prediction of the situation, then second the prediction of future based on the dreams. And note that if it is a nightmare or a negative dream, do not predict anything, just reply with "I cannot analyse nightmare, please get professional help."  . The dream:' . $_REQUEST['prompt'];
 	$messages[] = $message;
 
 	// Define data
 	$data = array();
 	$data["model"] = "gpt-3.5-turbo";
 	$data["messages"] = $messages;
-	$data["max_tokens"] = 50;
+	$data["max_tokens"] = 100;
 
 	// init curl
 	$curl = curl_init($url);
