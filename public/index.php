@@ -22,8 +22,18 @@
 <body>
     <!--==================== HEADER ====================-->
     <?php
-        include "header.php";
+        // include "header.php";
     ?>
-
+    <h1>ChatGPT Search</h1>
+    <form id="search-form">
+      <label for="query">Search Query:</label>
+      <input type="text" id="query" name="query" required>
+      <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
