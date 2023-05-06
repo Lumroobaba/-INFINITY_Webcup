@@ -84,6 +84,10 @@ nav {
 
 #menuToggle input:checked~.container .hamburgers span {
     opacity: 1;
+    
+    position: fixed;
+    top: 75px;
+    left: 20px;
     transform: rotate(45deg) translate(-15px, -13px);
     background: #232323;
 }
@@ -94,7 +98,7 @@ nav {
 }
 
 #menuToggle input:checked~.container .hamburgers span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
+    transform: rotate(-45deg) translate(0, -0px);
 }
 
 #menu {
@@ -195,8 +199,7 @@ nav {
 .val-box {
     background: rgb(119, 117, 117);
     padding: 0 3vw 0 3vw;
-    border-radius: 10px;
-    margin-bottom: 5%;
+    border-radius: 10px; 
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -253,7 +256,7 @@ nav {
     grid-gap: 20px;
     width: 95%;
     padding: 30px;
-    height: 35vw;
+    /* height: 35vw; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -261,18 +264,18 @@ nav {
 
 .chart {
     background: #fff;
-    padding: 20px 20px 0 20px;
+    padding: 20px 20px 20px  20px;
     border-radius: 10px;
     box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
 
 }
 
 .graph {
-    width: 50%;
+    width: 45%;
 }
 
 #clock {
-    width: 40%;
+    width: 45%;
 }
 
 .chart h2 {
