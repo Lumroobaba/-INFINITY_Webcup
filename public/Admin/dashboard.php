@@ -8,7 +8,7 @@
     <title>DASHBOARD</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -91,14 +91,7 @@
             </div>
         </div>
     </div>
-    <!-- <div class="container">
-        <div class="graph">
-          
-   </div>
-        <div class="clock">
-        </div>
-    </div> -->
-
+   
     <div class="charts">
         <div class="chart graph">
             <h2>Earnings (past 12 months)</h2>
