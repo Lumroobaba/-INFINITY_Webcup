@@ -84,6 +84,10 @@ nav {
 
 #menuToggle input:checked~.container .hamburgers span {
     opacity: 1;
+    
+    position: fixed;
+    top: 75px;
+    left: 20px;
     transform: rotate(45deg) translate(-15px, -13px);
     background: #232323;
 }
@@ -94,7 +98,7 @@ nav {
 }
 
 #menuToggle input:checked~.container .hamburgers span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
+    transform: rotate(-45deg) translate(0, -0px);
 }
 
 #menu {
