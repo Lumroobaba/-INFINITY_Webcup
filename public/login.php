@@ -11,7 +11,7 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/login.css">
 
-    <title>Animated login form - Bedimcode</title>
+    <title>Login</title>
 </head>
 
 <body>
