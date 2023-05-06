@@ -75,6 +75,7 @@ img {
     margin-inline: 1.5rem;
     padding: 2.5rem 2.5rem;
     backdrop-filter: blur(8px);
+        min-width: 20%;
 }
 
 .login__title {
@@ -222,7 +223,8 @@ img {
     .login__form{
         width: 0.432px;
         padding: 4rem 3rem 3.5rem;
-        border-radius: 1.5rem;
+        border-radius: 1.5rem;   
+        min-width: 30%;
     }
     .login__title{
         font-size: 2rem;
