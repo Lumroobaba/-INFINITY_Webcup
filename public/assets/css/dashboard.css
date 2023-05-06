@@ -152,13 +152,16 @@ nav {
     width: 30px;
     height: 30px;
     border-radius: 70%;
+    position: relative;
+    bottom: 30%;
+    right: -20%;
 }
 
 .profile .bx {
     font-size: 100%;
     position: relative;
-    bottom: 20%;
-    right: 20%;
+    bottom: -20%;
+    right: 50%;
 }
 
 .bx-search-alt-2 {
@@ -392,7 +395,7 @@ nav {
     .header .item {
         position: relative;
         top: 2vw;
-        left: 4%;
+        /* left: 4%; */
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -415,11 +418,23 @@ nav {
 
         width: 50%;
     }
-
+ 
     .profile .bx {
         font-size: 100%;
         position: relative;
         bottom: 20%;
         right: 20%;
     }
+
+    .profile .bx { 
+        font-size: 100%;
+        position: absolute;
+        bottom: 67%;
+        right: 8%;
+    }
+    .bx-search-alt-2 {
+        position: absolute;
+        top: 70%;
+    }
+ 
 }
