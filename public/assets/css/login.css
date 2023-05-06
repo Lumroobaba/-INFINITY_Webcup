@@ -36,7 +36,10 @@ button {
 body {
     color: var(--white-color);
 }
-
+.login{ 
+    display: flex;
+    justify-content: center;
+}
 input,
 button {
     border: none;
@@ -75,7 +78,7 @@ img {
     margin-inline: 1.5rem;
     padding: 2.5rem 2.5rem;
     backdrop-filter: blur(8px);
-        min-width: 20%;
+        min-width: 30vw;
 }
 
 .login__title {
@@ -224,7 +227,7 @@ img {
         width: 0.432px;
         padding: 4rem 3rem 3.5rem;
         border-radius: 1.5rem;   
-        min-width: 30%;
+        min-width: 30vw;
     }
     .login__title{
         font-size: 2rem;
