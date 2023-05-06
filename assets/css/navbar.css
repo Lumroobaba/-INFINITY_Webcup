@@ -1,0 +1,17 @@
+nav {
+    background: transparent;
+    height: 2cm;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5% 0 5%;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 90vw;
+    z-index: 100;
+}
+
+#logo {
+    width: 8%;
+    z-index: 100;
+}
