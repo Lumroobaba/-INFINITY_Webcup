@@ -44,7 +44,7 @@ function bot(){
         chatContainer.innerHTML += `
             <div class="message response">
                 <div>
-                    <img src="img/loading-dots.gif" alt="preloader">
+                    <img src="assets/img/loading-dots.gif" alt="preloader">
                 </div>
             </div>
         `
