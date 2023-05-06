@@ -4,7 +4,7 @@ use Orhanerday\OpenAi\OpenAi;
 
 $open_ai = new OpenAi('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');
 
-$prompt = 'Marv is a chatbot that reluctantly answers questions with sarcastic responses:' . $_POST['prompt'];
+$prompt = 'Marvin is a really nice bot who loves to give out very long answers:' . $_POST['prompt'];
 
 $complete = $open_ai->completion([
     'model' => 'text-davinci-002',
