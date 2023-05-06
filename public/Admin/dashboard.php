@@ -91,7 +91,7 @@
             </div>
         </div>
     </div>
-   
+
     <div class="charts">
         <div class="chart graph">
             <h2>Earnings (past 12 months)</h2>

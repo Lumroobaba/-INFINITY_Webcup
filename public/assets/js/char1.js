@@ -1,3 +1,4 @@
+// ==========================================Chart 1 start here======================================================
 const ctx = document.getElementById('lineChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'line',
@@ -19,6 +20,7 @@ const myChart = new Chart(ctx, {
         responsive: true
     }
 });
+// ==========================================Chart 2 start here======================================================
 const ctx2 = document.getElementById('lineChart2').getContext('2d');
 const myChart2 = new Chart(ctx2, {
     type: 'line',
@@ -41,6 +43,7 @@ const myChart2 = new Chart(ctx2, {
     }
 });
 
+// ==========================================Chart 3 start here======================================================
 const ctx3 = document.getElementById('lineChart3').getContext('2d');
 const myChart3 = new Chart(ctx3, {
     type: 'line',
@@ -62,4 +65,3 @@ const myChart3 = new Chart(ctx3, {
         responsive: true
     }
 });
-  
