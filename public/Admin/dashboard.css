@@ -239,17 +239,26 @@ nav {
     display: grid;
     /* grid-template-columns: 2fr 1fr; */
     grid-gap: 20px;
-    width: 90%;
+    width: 95%;
     padding: 30px;
     height: 35vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .chart{
     background: #fff;
     padding: 20px 20px 0 20px;
     border-radius: 10px;
-    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
-    width: 100%;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08); 
+
+}
+.graph{
+    width: 50%;
+}
+#clock{
+    width:40%;
 }
 
 .chart h2{
