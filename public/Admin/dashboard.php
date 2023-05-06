@@ -100,7 +100,7 @@
     </div> -->
 
     <div class="charts">
-        <div class="chart">
+        <div class="chart graph">
             <h2>Earnings (past 12 months)</h2>
             <canvas id="lineChart" width="5cm"></canvas>
         </div>
@@ -108,12 +108,12 @@
             <h2>Localtime (Mauritius)</h2>
             <div class="date">
                 <?php date_default_timezone_set("Indian/Mauritius");
-                        $hour = date('h');
-                        $minute = date('ia');
-                        $mydate=getdate(date("U"));
-                        $date = "$mydate[mday] $mydate[month] $mydate[year]"; 
-                        echo $date;
-                    ?>
+                $hour = date('h');
+                $minute = date('ia');
+                $mydate = getdate(date("U"));
+                $date = "$mydate[mday] $mydate[month] $mydate[year]";
+                echo $date;
+                ?>
             </div>
             <div class="clock-container">
                 <div class="clock">
@@ -149,8 +149,9 @@
     })
 </script>
 <script>
-    $('#menu-btn').click(function(){
+    $('#menu-btn').click(function() {
         $('#menu').toggleClass("active");
     })
 </script>
+
 </html>
