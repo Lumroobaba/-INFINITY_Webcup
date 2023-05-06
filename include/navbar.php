@@ -9,7 +9,7 @@
 <body>
     <nav>
         <img src="./assets/img/Celestial2.png" alt="" id="logo">
-        <a href="login.php"><p style="font-size: 1vw;">Already have an account? Sign in →</p></a>
+        <a href="login.php"><p style="font-size: 1vw;" >Already have an account? Sign in →</p></a>
     </nav>
 </body>
 </html>
