@@ -1,12 +1,18 @@
 const input = document.querySelector('textarea');
 const send = document.querySelector('.button');
-const chatContainer = document.querySelector('.form');
+const chatContainer = document.querySelector('.wrapper');
+const title = document.querySelector('.title');
+const subtitle = document.querySelector('.subtitle');
+const form = document.querySelector('.form');
 
 send.onclick = () => {
     if(input.value){
+        title.style.display = 'none';
+        subtitle.style.display = 'none';
+        form.style.display = 'none';
          bot();
     }
- }
+}
 
 // when click enter
 input.addEventListener("keypress", function(e) {
@@ -24,24 +30,24 @@ function bot() {
     data.append('prompt', inputText);
     http.open('POST', 'request.php', true);
     http.send(data);
-    // setTimeout(() => {
-    // // preloader here
-    // chatContainer.innerHTML += `
-    //             <div class="message response">
-    //                 <div>
-    //                     <img src="img/loading-dots.gif" alt="preloader">
-    //                 </div>
-    //             </div>
-    //         `;
-    // scrollDown();
-    // }, 1000);
+    setTimeout(() => {
+    // preloader here
+    chatContainer.innerHTML += `
+                <div class="form response">
+                    <div class="prediction">Your predictions:</div>
+                    <div class="row">
+                        <textarea type="text" name="prediction" required></textarea>
+                    </div>
+                </div>
+            `;
+    }, 1000);
     http.onload = () => {
     // process response here
-    // var response = JSON.parse(http.response);
-    // var replyText = processResponse(response.choices[0].message.content);
-    // var replyContainer = document.querySelectorAll('.response');
-    // replyContainer[replyContainer.length - 1].querySelector('div').innerHTML = replyText;
-    console.log(http.response);
+    var response = JSON.parse(http.response);
+    var replyText = processResponse(response.choices[0].message.content);
+    var replyContainer = document.querySelectorAll('.response');
+    replyContainer[replyContainer.length - 1].querySelector('textarea').innerHTML = replyText;
+    // console.log(http.response);
     };
 }
 
