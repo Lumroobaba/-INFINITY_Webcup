@@ -108,21 +108,18 @@
     border: 1px solid #8193b2;
     cursor: pointer;
   }
-  form .button input:hover{
+  .form .button input:hover{
     background: #8193b2;
     color: #000022;
   }
-  .wrapper .form .signup-link{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 16px;
-  }
-  .wrapper .form .signup-link a{
-    color: #16a085;
-    text-decoration: none;
-  }
-  form .signup-link a:hover{
-    text-decoration: underline;
+
+  .wrapper .prediction {
+    color:#13E8E9;
+    font-size: 17px;
+    font-weight: 300;
+    font-family: Consolas,monaco,monospace; 
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
   
   
