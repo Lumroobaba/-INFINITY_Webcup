@@ -3,9 +3,6 @@
     require_once 'private/validation.php';
     
      
-    $users = new Users();
-    $users = $users->retrievestat();
-    echo $users['totalVisits'];
 
 if (isset($_POST['btnRegister'])) { 
     require_once './private/conn.php';
@@ -16,8 +13,7 @@ if (isset($_POST['btnRegister'])) {
 
     $dbconn = new DBConn(); 
     $users = new Users();
-    $users = $users->addUsers($username,$email,$password);
-
+    $users = $users->addUsers($username,$email,$password); 
     
 }
 ?>
@@ -37,7 +33,7 @@ if (isset($_POST['btnRegister'])) {
     <title>REGISTER|Celestial</title>
 </head>
 
-<body>
+<body >
     <div class="main">  
         <div class="login">
             <img src="./assets/img/space.png" alt="login image" class="login__img">

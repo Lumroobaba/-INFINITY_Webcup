@@ -25,14 +25,6 @@
             //execute prepared statement
             $dbconn->execute();
         }
-
-        public function retrievestat(){
-            $dbconn = new DBConn();
-            $dbconn->query('SELECT * FROM stat');
-            return $row =  $dbconn->resultset();
-        }
-
-
         public function retrieveUsers(){
             $dbconn = new DBConn();
             $dbconn->query('SELECT * FROM stat');
