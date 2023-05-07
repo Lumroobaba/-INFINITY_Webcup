@@ -1,7 +1,7 @@
 <?php
     class DBConn{
         //define the database connection properties
-        private $host   = 'localhost:3306';
+        private $host   = 'localhost:3307';
         private $user   = 'root';
         private $pass   = '';
         private $dbname = 'dbinfinity';

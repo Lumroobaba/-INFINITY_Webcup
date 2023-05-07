@@ -11,8 +11,7 @@
 
 <nav>
     <img src="./assets/img/Celestial2.png" alt="" id="logo">
-    <a href="login.php">
-        <p style="font-size: 1vw;">Already have an account? Sign in →</p>
+    <a href="login.php"> 
     </a>
 </nav>
 
@@ -33,7 +32,7 @@
     </div>
     <div class="table table_top">
         <div class="date table-column">
-            <p>Name</p>
+            <p>ID</p>
         </div>
         <div class="date table-column">
             <p>Date</p>

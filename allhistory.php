@@ -1,3 +1,7 @@
+<?php
+require './private/getHistory.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +15,7 @@
 
 <nav>
     <img src="./assets/img/Celestial2.png" alt="" id="logo">
-    <a href="login.php">
-        <p style="font-size: 1vw;">Already have an account? Sign in →</p>
+    <a href="login.php"> 
     </a>
 </nav>
 
@@ -39,7 +42,7 @@
     </div>
     <div class="table table_top">
         <div class="date table-column">
-            <p>Name</p>
+            <p>ID</p>
         </div>
         <div class="date table-column">
             <p>Date</p>
@@ -52,19 +55,23 @@
         </div>
     </div>
     <div class="table table_bottom">
-        <div class="date table-column">
-            <p>Jayesh Chuttoo</p>
-        </div>
-        <div class="date table-column">
-            <p>24/07/23</p>
-        </div>
-        <div class="dream table-column">
-            <p>Build a game</p>
-        </div>
-        <div class="prediction table-column">
-            <p>You're fried up</p>
-        </div>
 
+        <?php
+        foreach ($listDreams as $row) { ?>
+            <div class="date table-column">
+                <p><?php echo $row['historyid']; ?></p>
+            </div>
+            <div class="date table-column">
+                <p><?php echo $row['date_created']; ?></p>
+            </div>
+            <div class="dream table-column">
+                <p><?php echo $row['description']; ?></p>
+            </div>
+            <div class="prediction table-column">
+                <p><?php echo $row['prediction']; ?></p>
+            </div>
+
+        <?php } ?>
     </div>
 
     <div class="container">
