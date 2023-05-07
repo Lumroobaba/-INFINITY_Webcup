@@ -1,16 +1,15 @@
-<?php 
-  // session_start(); 
-if($_SESSION["login"] != "loggedIn"){ 
+<?php
+session_start();
+if ($_SESSION["login"] != "loggedIn") {
   header("location:login.php");
 }
 
 
-session_start();
 require_once 'private/validation.php';
 
 
 
-if (isset($_POST['submit'])) { 
+if (isset($_POST['submit'])) {
   require_once './private/History.php';
   $descriptions = $_POST['dream'];
   $prediction = $_POST['prediction'];
@@ -24,10 +23,11 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html lang="en">
 <style>
-  b{
+  b {
     display: none;
   }
 </style>
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
           </div>
         </form>
       </div>
-    </div> 
+    </div>
   </div>
 
   <!-- particles.js container -->
