@@ -1,0 +1,169 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(0, 0%, 0%);
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --h1-font-size: 1.75rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .813rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+input,
+button {
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+}
+
+body {
+    color: var(--white-color);
+}
+
+.user{ 
+    display: flex;
+    justify-content: center;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.user{
+    position: relative;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+.user__img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.user__form {
+    position: relative;
+    background-color: hsla(0, 0, 10%, .1);
+    border: 2px solid white;
+    margin-inline: 1.5rem;
+    padding: 2.5rem 2.5rem;
+    backdrop-filter: blur(8px);
+    min-width: 30vw;
+}
+
+.user__title {
+    text-align: center;
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: 2rem;
+}
+
+.user__content,
+.user__box {
+    display: grid;
+}
+
+.user__content {
+    row-gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.user__box {
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: .75rem;
+    border-bottom: 2px solid white;
+}
+
+.user__input {
+    width: 100%;
+    padding-block: .8rem;
+    background: none;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.user__box-input {
+    position: relative;
+}
+
+.user__label {
+    position: absolute;
+    left: 0;
+    top: 13px;
+    font-weight: var(--font-medium);
+    transition: top .3s, font-size .3s;
+}
+
+.user__box:nth-child(2) input {
+    padding-right: 1.8rem;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--white-color);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    margin-bottom: 2rem;
+
+}
+
+.user__input:focus+.user__label {
+    top: -12px;
+    font-size: var(--small-font-size);
+}
+
+
+/* Input focus move up label */
+
+.user__input:not(:placeholder-shown).user__input:not(:focus)+.login__label {
+    top: -12px;
+    font-size: var(--small-font-size);
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (min-width: 576px) {
+    user {
+        justify-content: center;
+    }
+    .user__form{
+        width: 0.432px;
+        padding: 4rem 3rem 3.5rem;
+        border-radius: 1.5rem;   
+        min-width: 30vw;
+    }
+    .user__title{
+        font-size: 2rem;
+    }
+
+}
