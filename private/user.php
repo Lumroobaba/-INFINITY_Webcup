@@ -1,27 +1,27 @@
 <?php
-    require_once 'autoload.php';
-    class User{
+    require_once 'conn.php';
+    class Users{
         public function setUserid($userid){
             $this -> userid = $userid;
         }
         public function setUsername($username){
             $this -> username = $username;
         }
-        public function setEmail($email){
-            $this -> useremail = $email;
+        public function setUseremail($useremail){
+            $this -> useremail = $useremail;
         }
-        public function setPass($password){
-            $this -> userpass = $password;
+        public function setUserpass($userpass){
+            $this -> userpass = $userpass;
         }
 
-        public function addUsers($username,$email,$password){
+        public function addUsers($username,$useremail,$userpass){
             $dbconn= new DBConn();
             //prepared statement
             $dbconn->query('INSERT INTO tbluser(username, useremail, userpass) VALUES(:username, :email, :pass)');
             //call bind method in DBHandlerclass
             $dbconn->bind(':username',$username);
-            $dbconn->bind(':email',$email);
-            $dbconn->bind(':pass', $password);
+            $dbconn->bind(':email',$useremail);
+            $dbconn->bind(':pass', $userpass);
             //execute prepared statement
             $dbconn->execute();
         }
@@ -34,8 +34,8 @@
 
         public function retrieveEmail(){
             $dbconn = new DBConn();
-            $dbconn->query('SELECT * FROM tbluser WHERE useremail = :email');
-            $dbconn->bind(':email', $this -> useremail);
+            $dbconn->query('SELECT * FROM tbluser WHERE useremail = :useremail');
+            $dbconn->bind(':useremail', $this -> useremail);
             return $row =  $dbconn->resultset();
         }
     }
