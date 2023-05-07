@@ -1,15 +1,8 @@
 <?php
-<<<<<<< HEAD
-session_start(); 
-// if($_SESSION["login"] != "loggedIn"){ 
-//   header("location:login.php");
-// }
-=======
 session_start();
 if ($_SESSION["login"] != "loggedIn") {
   header("location:login.php");
 }
->>>>>>> 68fe019b8d12cbe16fb42e7f7c0cf532998864b5
 
 
 require_once 'private/validation.php';
