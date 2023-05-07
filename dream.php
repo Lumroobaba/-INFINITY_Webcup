@@ -1,5 +1,5 @@
-<?php
-session_start(); 
+<?php 
+  // session_start(); 
 if($_SESSION["login"] != "loggedIn"){ 
   header("location:login.php");
 }
@@ -23,7 +23,11 @@ if (isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-
+<style>
+  b{
+    display: none;
+  }
+</style>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

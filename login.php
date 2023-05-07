@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 require_once 'private/validation.php';
 
 if (isset($_POST['btnLogin'])) { 
@@ -20,11 +21,7 @@ if (isset($_POST['btnLogin'])) {
                 header('Location:http:/localhost/-INFINITY_Webcup/dream.php
                 ');
                 $_SESSION["login"] = "loggedIn";
-            } else {
-                $_SESSION['client'] = true;
-                header('Location:http:/-INFINITY_Webcup/dream.php');
-                $_SESSION["login"] = "loggedIn";
-            }
+            } 
         } else {
             $login = false;
         }
