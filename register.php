@@ -1,8 +1,6 @@
 <?php
     session_start();
     require_once 'private/validation.php';
-    
-     
 
 if (isset($_POST['btnRegister'])) { 
     require_once './private/conn.php';
@@ -14,7 +12,12 @@ if (isset($_POST['btnRegister'])) {
     $dbconn = new DBConn(); 
     $users = new Users();
     $users = $users->addUsers($username,$email,$password); 
-    
+}
+if(isset($_SESSION['captcha'])){
+    $now = time();
+    if($now >= $_SESSION['captcha']){
+      unset($_SESSION['captcha']);
+    }
 }
 
 ?>
@@ -81,6 +84,18 @@ if (isset($_POST['btnRegister'])) {
                     <a href="" class="login__forgot">Forgot Password?</a>
                 </div>
 
+                <div class="form__recaptcha">
+                    <?php
+                        if(!isset($_SESSION['captcha'])){
+                        echo '
+                            <div class="form-group" style="width:100%;">
+                            <div class="g-recaptcha" data-sitekey="6Lfz1gEhAAAAAMB2VjCU4xwbI2XzYNzdwORN1UH7"></div>
+                            </div>
+                        ';
+                        }
+                    ?>
+                </div>
+
                 <!-- <button class="login__button" name="btnRegister">Register</button> -->
                 <input type="submit" class="login__button" value="Register" name="btnRegister">
 
@@ -101,6 +116,7 @@ if (isset($_POST['btnRegister'])) {
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/login.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </body>
 
 </html>
