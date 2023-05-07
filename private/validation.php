@@ -3,8 +3,8 @@
         if((!empty($email)) && (!empty($password))){
     
             require_once 'user.php';
-            $user = new User();
-            $user->setEmail($email);
+            $user = new Users();
+            $user->setUserEmail($email);
             $row = $user->retrieveEmail();
 
             if($row){
@@ -82,7 +82,7 @@
                 $_SESSION['error'] = "* Password is not Strong!";
             }else{
                 require_once 'user.php';
-                $user = new User();
+                $user = new Users();
                 $row = $user->retrieveUsers();
 
                 foreach($row as $rows) { 
@@ -96,7 +96,7 @@
                 }
                 // if(($_SESSION['signup'] == true) && (isset($_SESSION['captcha']))){
                 if($_SESSION['signup'] == true){
-                    $user = new User();
+                    $user = new Users();
                     $password = password_hash($password, PASSWORD_DEFAULT);
                     $user->addUsers($username,$email,$password);
                     header('Location:login.php');

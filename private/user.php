@@ -1,34 +1,20 @@
 <?php
-    require_once 'autoload.php';
-    class User{
+    require_once 'conn.php';
+    class Users{
         public function setUserid($userid){
             $this -> userid = $userid;
         }
         public function setUsername($username){
             $this -> username = $username;
         }
-        public function setEmail($email){
-            $this -> useremail = $email;
+        public function setUseremail($useremail){
+            $this -> useremail = $useremail;
         }
-        public function setPass($password){
-            $this -> userpass = $password;
-        }
-
-        public function countUsername(){
-            $dbconn = new DBConn();
-            $dbconn->query('SELECT COUNT(*) as count FROM tbluser WHERE username = :username');
-            $dbconn->bind(':username', $this -> username);
-            return $row =  $dbconn->resultset();
-        }
-        
-        public function countUseremail(){
-            $dbconn = new DBConn();
-            $dbconn->query('SELECT COUNT(*) as count FROM tbluser WHERE useremail = :useremail');
-            $dbconn->bind(':useremail', $this -> useremail);
-            return $row =  $dbconn->resultset();
+        public function setUserpass($userpass){
+            $this -> userpass = $userpass;
         }
 
-        public function addUser($userimage,$username,$email,$password,$userotp,$status){
+        public function addUsers($username,$email,$password){
             $dbconn= new DBConn();
             //prepared statement
             $dbconn->query('INSERT INTO tbluser(userimage, username, useremail, userpass, userotp, status, usertype) VALUES(:userimage, :username, :email, :pass, :userotp, :status, :usertype)');
@@ -37,9 +23,6 @@
             $dbconn->bind(':username',$username);
             $dbconn->bind(':email',$email);
             $dbconn->bind(':pass', $password);
-            $dbconn->bind(':userotp', $userotp);
-            $dbconn->bind(':status', $status);
-            $dbconn->bind(':usertype', 0);
             //execute prepared statement
             $dbconn->execute();
         }
@@ -59,8 +42,8 @@
         
         public function retrieveUseremail(){
             $dbconn = new DBConn();
-            $dbconn->query('SELECT * FROM tbluser WHERE useremail = :useremail');
-            $dbconn->bind(':useremail',  $this -> useremail);
+            $dbconn->query('SELECT * FROM tbluser WHERE useremail = :email');
+            $dbconn->bind(':email', $this -> useremail);
             return $row =  $dbconn->resultset();
         }
         
