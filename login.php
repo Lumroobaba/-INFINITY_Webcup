@@ -1,5 +1,4 @@
-<?php
-session_start();
+<?php 
 require_once 'private/validation.php';
 
 if (isset($_POST['btnLogin'])) { 
