@@ -16,6 +16,7 @@ if (isset($_POST['btnRegister'])) {
     $users = $users->addUsers($username,$email,$password); 
     
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

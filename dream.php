@@ -9,24 +9,18 @@ require_once 'private/validation.php';
 
 
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) { 
   require_once './private/History.php';
-  $descriptions = $_POST['dream'];
-  $prediction = $_POST['prediction'];
-
-  $dbconn = new DBConn();
+  $descriptions = $_POST['dreams'];
+ 
   $dreams = new dreams();
-  $dreams = $dreams->addDreams($descriptions, $prediction);
+  $dreams = $dreams->addDreams($descriptions);
 }
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<style>
-  b {
-    display: none;
-  }
-</style>
 
 <head>
   <meta charset="UTF-8">
@@ -53,7 +47,7 @@ if (isset($_POST['submit'])) {
         <form method="POST">
           <div class="dream">Enter your dream:</div>
           <div class="row">
-            <textarea type="text" name="dream" required></textarea>
+            <textarea type="text" name="dreams" required></textarea>
           </div>
           <br>
           <div class="row button">

@@ -1,8 +1,7 @@
 <?php
 include "../-INFINITY_Webcup/include/navbar.php";
 
-session_start();
-$_SESSION["login"] = "l";
+session_start(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">

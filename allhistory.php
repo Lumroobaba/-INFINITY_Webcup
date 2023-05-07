@@ -65,7 +65,7 @@ require './private/History.php';
                 <p><?php echo $row['date_created']; ?></p>
             </div>
             <div class="dream table-column">
-                <p><?php echo $row['description']; ?></p>
+                <p><?php echo $row['descriptions']; ?></p>
             </div>
             <div class="prediction table-column">
                 <p><?php echo $row['prediction']; ?></p>

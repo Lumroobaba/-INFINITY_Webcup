@@ -10,5 +10,6 @@
     unset($_SESSION['existing']);
     unset($_SESSION['code']);
     unset($_SESSION['usertype']);
+    $_SESSION["login"] = "d";
     header("Location:index.php");
 ?>
