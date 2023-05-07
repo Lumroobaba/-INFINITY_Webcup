@@ -18,7 +18,7 @@
 	$data = array();
 	$data["model"] = "gpt-3.5-turbo";
 	$data["messages"] = $messages;
-	$data["max_tokens"] = 100;
+	$data["max_tokens"] = 150;
 
 	// init curl
 	$curl = curl_init($url);
