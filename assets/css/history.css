@@ -3,6 +3,7 @@ p {
     color: rgb(0, 0, 0);
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
 }
 
 nav {
@@ -45,9 +46,10 @@ body {
     /* background-color: rgb(111, 112, 112);  */
 }
 
-.top p {
-    padding: 2% 5%;
+.top a {
+    padding: 1% 5%;
     border: 2px solid rgb(128, 128, 128);
+    margin-bottom: 1%;
     background-color: rgba(128, 128, 128, 0.156);
     border-radius: 5px;
 }

@@ -18,13 +18,14 @@
 
 <body>
     <div class="top">
-        <a href="">
-            <p>Home</p> 
-        <a href="">
-            <p>Analytics</p>
+        <a href="index.php">
+            <p>Home</p>
         </a>
         <a href="">
-            <p>allhistory.php</p>
+            <p>Account</p>
+        </a>
+        <a href="history.php">
+            <p>Back</p>
         </a>
         <a href="">
             <p>Log Out</p>
@@ -33,9 +34,6 @@
     <div class="container">
         <div class="title">
             <p>Dreams History</p>
-        </div>
-        <div class="btn">
-            <a href="allhistory.php"><button>View Dreams</button></a>
         </div>
 
     </div>
@@ -67,9 +65,13 @@
             <p>You're fried up</p>
         </div>
 
-
-
     </div>
+
+    <div class="container">
+        <div class="btn">
+            <a href="./history.php"><button>Back</button></a>
+        </div>
+
 </body>
 
 </html>
