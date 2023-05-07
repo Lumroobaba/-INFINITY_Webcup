@@ -16,20 +16,26 @@
 
         public function addUsers($username,$email,$password){
             $dbconn= new DBConn();
-            //prepared statement
-            $dbconn->query('INSERT INTO tbluser(userimage, username, useremail, userpass, userotp, status, usertype) VALUES(:userimage, :username, :email, :pass, :userotp, :status, :usertype)');
+            //prepared statement 
+            $dbconn->query('INSERT INTO tbluser(username, useremail, userpass) VALUES( :username, :useremail, :userpass)  ');
             //call bind method in DBHandlerclass
-            $dbconn->bind(':userimage',$userimage);
             $dbconn->bind(':username',$username);
-            $dbconn->bind(':email',$email);
-            $dbconn->bind(':pass', $password);
+            $dbconn->bind(':useremail',$email);
+            $dbconn->bind(':userpass', $password);
             //execute prepared statement
             $dbconn->execute();
         }
 
+        public function retrievestat(){
+            $dbconn = new DBConn();
+            $dbconn->query('SELECT * FROM stat');
+            return $row =  $dbconn->resultset();
+        }
+
+
         public function retrieveUsers(){
             $dbconn = new DBConn();
-            $dbconn->query('SELECT * FROM tbluser');
+            $dbconn->query('SELECT * FROM stat');
             return $row =  $dbconn->resultset();
         }
 
@@ -84,5 +90,3 @@
             $dbconn->execute();
         }
     }
-    }
-?>

@@ -2,24 +2,24 @@
     session_start();
     require_once 'private/validation.php';
     
-    if(isset($_SESSION["authentication"])){
-        if($_SESSION["authentication"] == true){
-            if($_SESSION["usertype"] == 0){
-                header('Location:index.php');
-            }else if($_SESSION["usertype"] == 1){
-                header('Location:admin/dashboard.php');
-            }
-        }
-    }else{
-        header('location:logout.php');
-    }
+     
+    $users = new Users();
+    $users = $users->retrievestat();
+    echo $users['totalVisits'];
 
-    // if(isset($_SESSION['captcha'])){
-    //     $now = time();
-    //     if($now >= $_SESSION['captcha']){
-    //       unset($_SESSION['captcha']);
-    //     }
-    // }
+if (isset($_POST['btnRegister'])) { 
+    require_once './private/conn.php';
+    require_once './private/user.php';
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $username=$_POST['username'];
+
+    $dbconn = new DBConn(); 
+    $users = new Users();
+    $users = $users->addUsers($username,$email,$password);
+
+    
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,26 +1,34 @@
 <?php
 session_start();
-    require_once 'private/validation.php';
+require_once 'private/validation.php';
 
-    if (isset($_POST['btnLogin'])){ 
-        if (login($_POST["email"],$_POST["password"])) {
-            $_SESSION["authentication"] = true;
-        } else{     
-            $_SESSION["authentication"] = false;
-            $_SESSION['error'] = "Your credentials are incorrect!!";   
-        }  
-    }  
-    if(isset($_SESSION["authentication"])){
-        if($_SESSION["authentication"] == true){
-            if($_SESSION["usertype"] == 0){
-                header('Location:dream.php');
-            }else if($_SESSION["usertype"] == 1){
-                header('Location:admin/dashboard.php');
+if (isset($_POST['btnLogin'])) { 
+    require_once './private/conn.php';
+    require_once './private/user.php';
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $dbconn = new DBConn(); 
+    $users = new Users();
+    $listUsers = $users->retrieveUsers($dbconn);
+
+    foreach ($listUsers as $row) {
+        if ($email == $row['useremail'] && $password == $row['userpass']) {
+            $_SESSION['email'] = $email;
+
+            if ($row['category'] == "ADMIN") {
+                $_SESSION['admin'] = true;
+                header('Location:http:/localhost/-INFINITY_Webcup/dream.php
+                ');
+            } else {
+                $_SESSION['client'] = true;
+                header('Location:http:/-INFINITY_Webcup/dream.php');
             }
+        } else {
+            $login = false;
         }
-    }else{
-        header('location:logout.php');
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +47,7 @@ session_start();
 </head>
 
 <body>
-    <div class="main"> 
+    <div class="main">
         <div class="login">
             <img src="./assets/img/space-login.jpg" alt="login image" class="login__img">
             <form method="POST" class="login__form">
@@ -77,13 +85,13 @@ session_start();
                 <!-- <button class="login__button">Login</button> -->
                 <input type="submit" name="btnLogin" class="login__button" value="Login">
 
-                <?php 
-                        if(isset($_SESSION['error'])){
-                            echo "<div class='alertmsg'>".$_SESSION['error']."</div>";
-        
-                            unset($_SESSION['error']);
-                        }
-                    ?>
+                <?php
+                if (isset($_SESSION['error'])) {
+                    echo "<div class='alertmsg'>" . $_SESSION['error'] . "</div>";
+
+                    unset($_SESSION['error']);
+                }
+                ?>
 
                 <p class="login__register">
                     Don't have an account ? <a href="register.php"> Register</a>
@@ -94,5 +102,6 @@ session_start();
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/login.js"></script>
-</body> 
+</body>
+
 </html>
