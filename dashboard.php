@@ -94,19 +94,19 @@
 
     <div class="charts">
         <div class="chart graph">
-            <h2>Earnings (past 12 months)</h2>
+            <h2>Dreams (past 12 months)</h2>
             <canvas id="lineChart" width="5cm"></canvas>
         </div>
         <div class="chart" id="clock">
             <h2>Localtime (Mauritius)</h2>
             <div class="date">
-                <!-- <?php date_default_timezone_set("Indian/Mauritius");
+                 <?php date_default_timezone_set("Indian/Mauritius");
                 $hour = date('h');
                 $minute = date('ia');
                 $mydate = getdate(date("U"));
                 $date = "$mydate[mday] $mydate[month] $mydate[year]";
                 echo $date;
-                ?> -->
+                ?> 
             </div>
             <div class="clock-container">
                 <div class="clock">
@@ -123,7 +123,7 @@
             </div>
         </div>
         <div class="chart graph">
-            <h2>Sales (past 12 months)</h2>
+            <h2>Users (past 12 months)</h2>
             <canvas id="lineChart2" width="5cm"></canvas>
         </div>
         <div class="chart graph">

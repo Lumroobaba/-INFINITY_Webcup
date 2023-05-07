@@ -31,7 +31,7 @@
         public function addUser($userimage,$username,$email,$password,$userotp,$status){
             $dbconn= new DBConn();
             //prepared statement
-            $dbconn->query('INSERT INTO tbluser(userimage, username, useremail, userpass, userotp, status, usertype) VALUES(:userimage, :username, :email, :pass, :userotp, :status, :usertype)' );
+            $dbconn->query('INSERT INTO tbluser(userimage, username, useremail, userpass, userotp, status, usertype) VALUES(:userimage, :username, :email, :pass, :userotp, :status, :usertype)');
             //call bind method in DBHandlerclass
             $dbconn->bind(':userimage',$userimage);
             $dbconn->bind(':username',$username);
