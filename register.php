@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once 'includes/validation.php';
+    require_once 'private/validation.php';
     
     if(isset($_SESSION["authentication"])){
         if($_SESSION["authentication"] == true){
@@ -41,7 +41,7 @@
     <div class="main">  
         <div class="login">
             <img src="./assets/img/space.png" alt="login image" class="login__img">
-            <div class="login__form">
+            <form method="POST" class="login__form">
                 <h1 class="login__title">Register</h1>
                 <div class="login__content">
 
@@ -67,7 +67,7 @@
                         <i class="ri-lock-2-line login__icon"></i>
 
                         <div class="login__box-input">
-                            <input type="password" class="login__input" placeholder="" required>
+                            <input type="password" name="password" class="login__input" placeholder="" required>
                             <label for="" class="login__label">Password</label>
                             <i class="ri-eye-line login__eye" id="login-eye"></i>
                         </div>
@@ -81,10 +81,11 @@
                         <label for="" class="login_check-label">Remember me</label>
                     </div>
 
-                    <a href=" " class="login__forgot">Forgot Password?</a>
+                    <a href="" class="login__forgot">Forgot Password?</a>
                 </div>
 
-                <button class="login__button" name="btnRegister">Register</button>
+                <!-- <button class="login__button" name="btnRegister">Register</button> -->
+                <input type="submit" class="login__button" value="Register" name="btnRegister">
 
                 <?php 
                     if(isset($_SESSION['error'])){
@@ -97,7 +98,7 @@
                 <p class="login__register">
                     Already have an account ? <a href="login.php"> Login</a>
                 </p>
-            </div>
+            </form>
         </div>
     </div>
 

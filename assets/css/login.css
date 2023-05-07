@@ -218,6 +218,19 @@ img {
     font-size: var(--small-font-size);
 }
 
+.alertmsg{
+    color: #ce2819;
+    margin-top: -25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.successmsg{
+    color: #18ca36;
+    margin-top: -25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 /*=============== BREAKPOINTS ===============*/
 @media screen and (min-width: 576px) {
     login {

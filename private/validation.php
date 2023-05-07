@@ -1,11 +1,11 @@
 <?php
-    function login(string $username, string $password):bool{ 
-        if((!empty($username)) && (!empty($password))){
+    function login(string $email, string $password):bool{ 
+        if((!empty($email)) && (!empty($password))){
     
-            require_once 'private/user.php';
+            require_once 'user.php';
             $user = new User();
-            $user->setUsername($username);
-            $row = $user->retrieveusername();
+            $user->setEmail($email);
+            $row = $user->retrieveEmail();
 
             if($row){
                     if(password_verify($password, $row[0]['userpass'])){
@@ -32,8 +32,8 @@
         }
     }
 
-    if (isset($_POST["btnSignup"])){
-        if((!empty($_POST["email"])) && (!empty($_POST["password"]))){
+    if (isset($_POST["btnRegister"])){
+        if((!empty($_POST["username"])) && (!empty($_POST["email"])) && (!empty($_POST["password"]))){
 
             // if(!isset($_SESSION['captcha'])){
             //     // Storing google recaptcha response
@@ -81,7 +81,7 @@
                 $_SESSION['email'] = $email;
                 $_SESSION['error'] = "* Password is not Strong!";
             }else{
-                require_once 'private/user.php';
+                require_once 'user.php';
                 $user = new User();
                 $row = $user->retrieveUsers();
 
