@@ -11,7 +11,7 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/login.css">
 
-    <title>Login</title>
+    <title>Login|Celestial</title>
 </head>
 
 <body>

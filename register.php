@@ -34,7 +34,7 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/login.css">
 
-    <title>Register</title>
+    <title>REGISTER|Celestial</title>
 </head>
 
 <body>

@@ -1,5 +1,5 @@
  * {
-     font-size: 4vw;
+     font-size: 5vw;
      margin: 0;
      padding: 0;
      box-sizing: border-box;
@@ -40,6 +40,9 @@
     width: 49%;
     border-radius: 20px;
 }
+.interaction a{
+    width: 100%;
+}
 
 .interaction #btn:hover{ 
     
@@ -71,7 +74,11 @@
      bottom: 1cm;
      opacity: .5;
  }
-
+a{
+    font-size: 100%;
+    text-decoration: underline;
+    color: aqua;
+}
 
 
 
@@ -82,8 +89,7 @@
      top: 0;
      left: 0;
      width: 100%;
-     height: 100vh;
-     /* https://lh3.googleusercontent.com/ka_5IYJDRkXZnbptxq64LPuggGL5FM8gnpJlsuSiOQh4b39kMkiRbVfX8iK8bjMg5SLkdfoix09P60wyFjN2=w681-h614 */
+     height: 100vh; 
      background: url("https://i.postimg.cc/c1Q3njM0/bg2.jpg");
      opacity: .4;
      background-size: cover;

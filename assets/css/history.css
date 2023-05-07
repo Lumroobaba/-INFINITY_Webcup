@@ -1,0 +1,88 @@
+a,
+p {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+nav {
+    background: transparent;
+    height: 3cm;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 5% 0 5%;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90vw;
+    z-index: 100;
+    background-color: antiquewhite;
+}
+
+#logo {
+    width: 8%;
+    z-index: 100;
+}
+
+ 
+
+.top,
+.container,
+.table,
+.table-title {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: 2px solid red;
+    align-items: center;
+}
+.top{
+    padding-top: 3cm;
+}
+body {
+    /* background-color: rgb(111, 112, 112);  */
+}
+
+.top a {
+    padding: 1% 5%;
+    border: 2px solid rgb(128, 128, 128);
+    margin-bottom: 1%;
+    background-color: rgba(128, 128, 128, 0.156);
+    border-radius: 5px;
+}
+
+.container {
+    justify-content: space-evenly;
+    border-bottom: none;
+}
+
+
+.btn button {
+    background: purple;
+    color: white;
+    height: 6vh;
+    width: 15vw;
+    border-radius: 5px;
+}
+
+.table {
+    border-bottom: none;
+    border: 2px solid rgba(0, 0, 0, 0.136);
+}
+
+.table_top {
+    border-radius: 50px 50px 0 0;
+}
+
+.table_bottom {
+    border-radius: 0 0 20px 20px;
+}
+
+.table-column {
+    text-align: center;
+    width: 20vw;
+    padding-bottom: 2.5%;
+}
