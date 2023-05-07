@@ -2,7 +2,7 @@
 include "../-INFINITY_Webcup/include/navbar.php";
 
 session_start();
-$_SESSION["login"] = "";
+$_SESSION["login"] = "l";
 ?>
 <!DOCTYPE html>
 <html lang="en">

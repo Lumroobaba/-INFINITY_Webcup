@@ -1,16 +1,22 @@
 <?php
+<<<<<<< HEAD
 session_start(); 
 // if($_SESSION["login"] != "loggedIn"){ 
 //   header("location:login.php");
 // }
-
-
+=======
 session_start();
+if ($_SESSION["login"] != "loggedIn") {
+  header("location:login.php");
+}
+>>>>>>> 68fe019b8d12cbe16fb42e7f7c0cf532998864b5
+
+
 require_once 'private/validation.php';
 
 
 
-if (isset($_POST['submit'])) { 
+if (isset($_POST['submit'])) {
   require_once './private/History.php';
   $descriptions = $_POST['dream'];
   $prediction = $_POST['prediction'];
@@ -23,6 +29,11 @@ if (isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+<style>
+  b {
+    display: none;
+  }
+</style>
 
 <head>
   <meta charset="UTF-8">
@@ -57,7 +68,7 @@ if (isset($_POST['submit'])) {
           </div>
         </form>
       </div>
-    </div> 
+    </div>
   </div>
 
   <!-- particles.js container -->

@@ -15,20 +15,11 @@ if (isset($_POST['btnLogin'])) {
     foreach ($listUsers as $row) {
         if ($email == $row['useremail'] && $password == $row['userpass']) {
             $_SESSION['email'] = $email;
-
-            if ($row['category'] == "ADMIN") {
-                $_SESSION['admin'] = true;
-                header('Location:http:/localhost/-INFINITY_Webcup/dream.php
+ 
+                header('Location:dream.php
                 ');
-                $_SESSION["login"] = "loggedIn";
-            } else {
-                $_SESSION['client'] = true;
-                header('Location:http:/-INFINITY_Webcup/dream.php');
-                $_SESSION["login"] = "loggedIn";
-            }
-        } else {
-            $login = false;
-        }
+                $_SESSION["login"] = "loggedIn"; 
+        }  
     }
 }
 ?>
