@@ -1,5 +1,8 @@
 <?php
 include "../-INFINITY_Webcup/include/navbar.php";
+
+session_start();
+$_SESSION["login"] = "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +39,8 @@ include "../-INFINITY_Webcup/include/navbar.php";
         <div class="input-cursor"></div>
         <div id="sentence" class="sentence">| </div>
         <div class="interaction">
-            <button id="btn" href="">TRY ONYRIX</button>
+            <a href="dream.php"><button id="btn">TRY ONYRIX</button></a>
+
 
         </div>
     </div>

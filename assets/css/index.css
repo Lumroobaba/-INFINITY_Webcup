@@ -40,6 +40,9 @@
     width: 49%;
     border-radius: 20px;
 }
+.interaction a{
+    width: 100%;
+}
 
 .interaction #btn:hover{ 
     

@@ -145,3 +145,49 @@
     bottom: 0px;
   } 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  nav {
+    background: transparent;
+    height: 2cm;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 5% 0 5%;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+}
+
+#logo {
+    width: 8%;
+    z-index: 100;
+}
+
+nav a ,p{
+    color: white;
+    text-decoration: none;
+}
