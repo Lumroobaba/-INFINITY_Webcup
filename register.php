@@ -1,3 +1,26 @@
+<?php
+    session_start();
+    require_once 'includes/validation.php';
+    
+    if(isset($_SESSION["authentication"])){
+        if($_SESSION["authentication"] == true){
+            if($_SESSION["usertype"] == 0){
+                header('Location:index.php');
+            }else if($_SESSION["usertype"] == 1){
+                header('Location:admin/dashboard.php');
+            }
+        }
+    }else{
+        header('location:logout.php');
+    }
+
+    // if(isset($_SESSION['captcha'])){
+    //     $now = time();
+    //     if($now >= $_SESSION['captcha']){
+    //       unset($_SESSION['captcha']);
+    //     }
+    // }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,40 +41,33 @@
     <div class="main">  
         <div class="login">
             <img src="./assets/img/space.png" alt="login image" class="login__img">
-            <form action="" class="login__form">
+            <div class="login__form">
                 <h1 class="login__title">Register</h1>
                 <div class="login__content">
-
 
                     <div class="login__box">
                         <i class="ri-user-fill login__icon"></i>
 
                         <div class="login__box-input">
-                            <input type="email" class="login__input" placeholder="" required>
+                            <input type="username" name="username" class="login__input" placeholder="" required>
                             <label for="" class="login__label login__eye">Username</label>
                         </div>
                     </div>
-
-
-
 
                     <div class="login__box">
                         <i class="ri-mail-line"></i>
 
                         <div class="login__box-input">
-                            <input type="email" class="login__input" placeholder="" required>
+                            <input type="email" name="email" class="login__input" placeholder="" required>
                             <label for="" class="login__label login__eye">Email</label>
                         </div>
                     </div>
-
-
-
 
                     <div class="login__box">
                         <i class="ri-lock-2-line login__icon"></i>
 
                         <div class="login__box-input">
-                            <input type="password" class="login__input" id="login-pass" placeholder="" required>
+                            <input type="password" class="login__input" placeholder="" required>
                             <label for="" class="login__label">Password</label>
                             <i class="ri-eye-line login__eye" id="login-eye"></i>
                         </div>
@@ -68,12 +84,20 @@
                     <a href=" " class="login__forgot">Forgot Password?</a>
                 </div>
 
-                <button class="login__button">Register</button>
+                <button class="login__button" name="btnRegister">Register</button>
+
+                <?php 
+                    if(isset($_SESSION['error'])){
+                        echo "<div class='alertmsg'>".$_SESSION['error']."</div>";
+    
+                        unset($_SESSION['error']);
+                    }
+                ?>
 
                 <p class="login__register">
                     Already have an account ? <a href="login.php"> Login</a>
                 </p>
-            </form>
+            </div>
         </div>
     </div>
 
