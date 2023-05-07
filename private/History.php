@@ -7,12 +7,13 @@ class dreams{
     }
 
     
-    public function addDreams($description,$prediction){
+    public function addDreams($descriptions,$prediction){
         $dbconn= new DBConn();
         //prepared statement 
-        $dbconn->query('INSERT INTO tblhistory(descriptions) VALUES( :descriptions)  ');
+        $dbconn->query('INSERT INTO tblhistory(descriptions,prediction) VALUES( :descriptions,:prediction)');
         //call bind method in DBHandlerclass
         $dbconn->bind(':descriptions',$descriptions); 
+        $dbconn->bind(':prediction',$prediction); 
         //execute prepared statement
         $dbconn->execute();
     }

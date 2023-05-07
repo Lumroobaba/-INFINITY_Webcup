@@ -5,7 +5,7 @@
             require_once 'user.php';
             $user = new Users();
             $user->setUserEmail($email);
-            $row = $user->retrieveEmail();
+            // $row = $user->retrieveEmail();
 
             if($row){
                     if(password_verify($password, $row[0]['userpass'])){

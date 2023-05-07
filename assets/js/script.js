@@ -6,19 +6,19 @@ const subtitle = document.querySelector('.subtitle');
 const form = document.querySelector('.form');
 
 send.onclick = () => {
-    if(input.value){
+    if (input.value) {
         title.style.display = 'none';
         subtitle.style.display = 'none';
         form.style.display = 'none';
-         bot();
+        bot();
     }
 }
 
 // when click enter
-input.addEventListener("keypress", function(e) {
+input.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
-    e.preventDefault();
-    send.click();
+        e.preventDefault();
+        send.click();
     }
 });
 
@@ -31,8 +31,8 @@ function bot() {
     http.open('POST', 'request.php', true);
     http.send(data);
     setTimeout(() => {
-    // preloader here
-    chatContainer.innerHTML += `
+        // preloader here
+        chatContainer.innerHTML += `
                 <div class="form response">
                     <div class="prediction">Your predictions:</div>
                     <div class="row">
@@ -42,18 +42,19 @@ function bot() {
             `;
     }, 1000);
     http.onload = () => {
-    // process response here
-    var response = JSON.parse(http.response);
-    var replyText = processResponse(response.choices[0].message.content);
-    var replyContainer = document.querySelectorAll('.response');
-    replyContainer[replyContainer.length - 1].querySelector('textarea').innerHTML = replyText;
-    // console.log(http.response);
+        // process response here
+        var response = JSON.parse(http.response);
+        var replyText = processResponse(response.choices[0].message.content);
+        var replyContainer = document.querySelectorAll('.response');
+        replyContainer[replyContainer.length - 1].querySelector('textarea').innerHTML = replyText;
+        // console.log(http.response);
     };
 }
 
-function processResponse(res){
+function processResponse(res) {
     var arr = res.split(':')
-    return arr[arr.length-1]
+    return arr[arr.length - 1]
         .replace(/(\r\n|\r|\n)/gm, '')
         .trim()
 }
+

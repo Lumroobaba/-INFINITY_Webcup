@@ -1,8 +1,8 @@
 <?php
-// session_start(); 
-// if($_SESSION["login"] != "loggedIn"){ 
-//   header("location:login.php");
-// }
+session_start(); 
+if($_SESSION["login"] != "loggedIn"){ 
+  header("location:login.php");
+}
 
 
 session_start();
@@ -10,15 +10,14 @@ require_once 'private/validation.php';
 
 
 
-if (isset($_POST['submit'])) {
-  require_once './private/conn.php';
+if (isset($_POST['submit'])) { 
   require_once './private/History.php';
-  $description = $_POST['dream'];
+  $descriptions = $_POST['dream'];
   $prediction = $_POST['prediction'];
 
   $dbconn = new DBConn();
   $dreams = new dreams();
-  $dreams = $dreams->addDreams($description, $prediction);
+  $dreams = $dreams->addDreams($descriptions, $prediction);
 }
 ?>
 
@@ -58,15 +57,7 @@ if (isset($_POST['submit'])) {
           </div>
         </form>
       </div>
-    </div>
-    <!-- <div class="wrapper">
-      <form action="#" method="#">
-        <div class="dream">Your predictions:</div>
-        <div class="row">
-          <textarea type="text" name="prediction" required></textarea>
-        </div>
-      </form>
-    </div> -->
+    </div> 
   </div>
 
   <!-- particles.js container -->

@@ -20,9 +20,11 @@ if (isset($_POST['btnLogin'])) {
                 $_SESSION['admin'] = true;
                 header('Location:http:/localhost/-INFINITY_Webcup/dream.php
                 ');
+                $_SESSION["login"] = "loggedIn";
             } else {
                 $_SESSION['client'] = true;
                 header('Location:http:/-INFINITY_Webcup/dream.php');
+                $_SESSION["login"] = "loggedIn";
             }
         } else {
             $login = false;
