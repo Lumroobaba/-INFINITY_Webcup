@@ -1,5 +1,5 @@
 <?php
-require './private/getHistory.php';
+require './private/History.php';
 ?>
 
 <!DOCTYPE html>
