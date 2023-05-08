@@ -2,24 +2,29 @@
 session_start();
 require_once 'private/validation.php';
 
-if (isset($_POST['btnLogin'])) { 
+if (isset($_POST['btnLogin'])) {
     require_once './private/conn.php';
     require_once './private/user.php';
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $dbconn = new DBConn(); 
+    $dbconn = new DBConn();
     $users = new Users();
     $listUsers = $users->retrieveUsers($dbconn);
 
     foreach ($listUsers as $row) {
         if ($email == $row['useremail'] && $password == $row['userpass']) {
             $_SESSION['email'] = $email;
- 
-                header('Location:dream.php
-                ');
-                $_SESSION["login"] = "loggedIn"; 
-        }  
+
+            $_SESSION["login"] = "loggedIn";
+            if ($row['usertype'] == "1") {
+                header('Location:dream.php');
+                $_SESSION['admin'] = true;
+                $_SESSION['email'] = $row['useremail'];
+            } else { 
+                header('Location:dream.php');
+            }
+        }
     }
 }
 ?>

@@ -1,7 +1,5 @@
 <?php
-if ($_SESSION["login"] != "loggedIn") {
-    header("location:dashboard.php");
-}
+require './private/History.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +13,7 @@ if ($_SESSION["login"] != "loggedIn") {
     <link rel="stylesheet" href="./assets/css/history.css">
 </head>
 
-<nav>
+<nav style="background-color: gray;">
     <img src="./assets/img/Celestial2.png" alt="" id="logo">
     <a href="login.php">
     </a>
@@ -23,18 +21,19 @@ if ($_SESSION["login"] != "loggedIn") {
 
 <body>
     <div class="top">
+        <a href="dashboard.php">
+            <p>Dashboard</p>
+        </a>
+        <a href="#">
+            <p>ACCOUNT</p>
+        </a>
         <a href="index.php">
             <p>Home</p>
-        </a>
-        <a href="">
-            <p>Account</p>
-        </a>
-        <a href="allhistory.php">
-            <p>History</p>
         </a>
         <a href="logout.php">
             <p>Log Out</p>
         </a>
+    </div> 
     </div>
     <div class="table table_top">
         <div class="date table-column">
@@ -51,28 +50,30 @@ if ($_SESSION["login"] != "loggedIn") {
         </div>
     </div>
     <div class="table table_bottom">
-        <div class="date table-column">
-            <p>Jayesh Chuttoo</p>
-        </div>
-        <div class="date table-column">
-            <p>24/07/23</p>
-        </div>
-        <div class="dream table-column">
-            <p>Build a game</p>
-        </div>
-        <div class="prediction table-column">
-            <p>You're fried up</p>
-        </div>
 
+        <?php
+        foreach ($checkacc as $row) { ?>
+            <div class="dream table-column">
+                <p><?php echo $row['userid']; ?></p>
+            </div>
+            <div class="date table-column">
+                <p><?php echo $row['username']; ?></p>
+            </div>
+            <div class="date table-column">
+                <p><?php echo $row['useremail']; ?></p>
+            </div>
+            <div class="prediction table-column">
+                <p><?php echo $row['usertype']; ?></p>
+            </div>
+
+        <?php } ?>
     </div>
 
     <div class="container">
         <div class="btn">
-            <a href="./allhistory.php"><button>View Dreams</button></a>
+            <a href="./users.php"><button>Back</button></a>
         </div>
 
-
-    </div>
 </body>
 
 </html>

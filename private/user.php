@@ -1,5 +1,5 @@
 <?php
-require_once 'conn.php';
+require_once 'conn.php'; 
 class Users
 {
     public function setUserid($userid)
@@ -19,6 +19,7 @@ class Users
         $this->$userpass = $userpass;
     }
 
+
     public function addUsers($username, $email, $password)
     {
         $dbconn = new DBConn();
@@ -31,11 +32,17 @@ class Users
         //execute prepared statement
         $dbconn->execute();
     }
-
     public function retrieveUsers()
     {
         $dbconn = new DBConn();
         $dbconn->query('SELECT * FROM tbluser');
+        return $row =  $dbconn->resultset();
+    }
+    public function userProfile($email)
+    {
+        $dbconn = new DBConn();
+        $dbconn->query('SELECT * FROM tbluser WHERE username = :email');
+        $dbconn->bind(':username', $this->$email);
         return $row =  $dbconn->resultset();
     }
 

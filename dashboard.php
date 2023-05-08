@@ -28,11 +28,8 @@
             <ul id="menu">
                 <a href="#">
                     <li><i class="bx bx-line-chart"></i>Dashboard</li>
-                </a>
-                <a href="#">
-                    <li><i class="bx bx-category"></i>Product list</li>
-                </a>
-                <a href="#">
+                </a> 
+                <a href="users.php">
                     <li><i class="bx bxs-user"></i>Users</li>
                 </a>
                 <a href="#">
@@ -41,7 +38,7 @@
                 <a href="#" target="_blank">
                     <li><i class="bx bx-message-dots"></i>Message</li>
                 </a>
-                <a href="#" target="_blank">
+                <a href="logout.php" target="_blank">
                     <li><i class="bx bx-log-out"></i>Logout</li>
                 </a>
             </ul>

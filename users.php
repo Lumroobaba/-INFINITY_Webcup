@@ -1,9 +1,4 @@
-<?php
-if ($_SESSION["login"] != "loggedIn") {
-    header("location:dashboard.php");
-}
-?>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,14 +18,14 @@ if ($_SESSION["login"] != "loggedIn") {
 
 <body>
     <div class="top">
-        <a href="index.php">
-            <p>Home</p>
+        <a href="dashboard.php">
+            <p>Dashboard</p>
         </a>
-        <a href="">
+        <a href="./account.php">
             <p>Account</p>
         </a>
-        <a href="allhistory.php">
-            <p>History</p>
+        <a href="index.php">
+            <p>Home</p>
         </a>
         <a href="logout.php">
             <p>Log Out</p>
@@ -68,7 +63,7 @@ if ($_SESSION["login"] != "loggedIn") {
 
     <div class="container">
         <div class="btn">
-            <a href="./allhistory.php"><button>View Dreams</button></a>
+            <a href="./allusers.php"><button>View all people</button></a>
         </div>
 
 

@@ -19,6 +19,7 @@ if(isset($_SESSION['captcha'])){
       unset($_SESSION['captcha']);
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
