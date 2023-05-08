@@ -3,8 +3,6 @@ session_start();
 if ($_SESSION["login"] != "loggedIn") {
   header("location:login.php");
 }
-
-
 require_once 'private/validation.php';
 
 
