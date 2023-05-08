@@ -21,7 +21,7 @@
         <a href="dashboard.php">
             <p>Dashboard</p>
         </a>
-        <a href="#">
+        <a href="./account.php">
             <p>Account</p>
         </a>
         <a href="index.php">
