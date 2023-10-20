@@ -8,20 +8,20 @@ if (isset($_POST['btnLogin'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    $_SESSION['email'] = $email;
     $dbconn = new DBConn();
     $users = new Users();
     $listUsers = $users->retrieveUsers($dbconn);
 
     foreach ($listUsers as $row) {
         if ($email == $row['useremail'] && $password == $row['userpass']) {
-            $_SESSION['email'] = $email;
 
             $_SESSION["login"] = "loggedIn";
             if ($row['usertype'] == "1") {
                 header('Location:dream.php');
                 $_SESSION['admin'] = true;
                 $_SESSION['email'] = $row['useremail'];
-            } else { 
+            } else {
                 header('Location:dream.php');
             }
         }
