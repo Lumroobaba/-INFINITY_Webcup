@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<?php
+session_start();
+if ($_SESSION["login"] != "loggedIn") {
+  header("location:login.php");
+}
+require_once 'private/validation.php';
+
+
+
+if (isset($_POST['submit'])) { 
+  require_once './private/History.php';
+  $descriptions = $_POST['dreams'];
+ 
+  $dreams = new dreams();
+  $dreams = $dreams->addDreams($descriptions);
+}
+
+?>
+
+>>>>>>> 2696d346b91bd999bbae18e394571f268501403e
 <!DOCTYPE html>
 <html lang="en">
 <head>
